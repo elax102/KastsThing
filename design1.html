@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kast's Thoughts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Passion+One:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body>
+    <section id="header">
+        <div class="title"></div>
+        <div class="color"></div>
+        <div class="title-text">
+            <h1 class="">Kast's<br>Thoughts</h1>
+        </div>
+    </section>
+    <section id="intro">
+        <p class="wow fadeInUp" data-wow-offset="400">Ever wondered what my thoughts were on those popular video games that get millions of views on various streams?</p>
+        <p class="wow fadeInUp" data-wow-offset="400">No?</p>
+        <p class="wow fadeInUp" data-wow-offset="300">Well, here they are anyway.</p>
+    </section>
+    <div class="posts-container">
+        <div class="post lol">
+            <div class="post-pic wow slideInUp" data-wow-delay="0.3s"></div>
+            <div class="post-content wow slideInUp">
+                <a href=""><h1>League<br>of<br>Legends</h1></a>
+            </div>
+        </div>
+        <div class="post ow">
+            <div class="post-pic wow slideInUp" data-wow-delay="0.3s"></div>
+            <div class="post-content wow slideInUp">
+                <a href=""><h1>over<br>watch</h1></a>
+            </div>
+        </div>
+        <div class="post dota">
+            <div class="post-pic wow slideInUp" data-wow-delay="0.3s"></div>
+            <div class="post-content wow slideInUp">
+                <a href=""><h1>DOTA 2</h1></a>
+            </div>
+        </div>
+        <div class="post fort">
+            <div class="post-pic wow slideInUp" data-wow-delay="0.3s"></div>
+            <div class="post-content wow slideInUp">
+                <a href="post.html"><h1>Fortnite</h1></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="countUp.js"></script>
+    <script>
+        //wow settings
+        wow = new WOW({
+            mobile: false,
+        })
+
+        //initiate wow animations
+        wow.init();
+
+        //animate the rotation of the title text background gradient
+        var i = 90;
+        var counter = 0;
+        var factor = 1;
+
+        var animateTitle = function () {
+            if (i <= 275) {
+                i++;
+                counter += 0.15;
+                $('.title-text h1').css({ 'background-image': 'linear-gradient(' + i + 'deg,  #fff 49.97%, #7beebe 50%)' });
+                setTimeout(animateTitle, counter);
+            }
+        }
+        setTimeout(animateTitle, counter);
+    </script>
+</body>
+</html>

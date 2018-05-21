@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kast's Thoughts</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style2.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Passion+One:900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    </head>
+
+    <body>
+        <div class="post-page-container">
+            <h1 class="wow fadeInUp">Fortnite Battle Royale</h1>
+            <div class="post-body body-fixed wow fadeInUp" data-wow-delay="0.3s">
+                <div>
+                    <p>
+                        I love PlayerUnknown’s Battlegrounds, but playing it can feel like banging my head against an armoured UAZ (without a level
+                        three helmet). I can play a two-hour session and—if I avoid dropping into populated areas—see perhaps three or four intense
+                        firefights. Or I might play for half an hour and come across one enemy, before falling to a headshot from a sniper that
+                        I never saw. Sometimes I’m just not in the mood for something that slow. And that’s where Fortnite Battle Royale shines.
+                    </p>
+                    <p>
+                        Some elements of PUBG have been transplanted almost unaltered into Fortnite: the ever-shrinking battle zone, the loot drops,
+                        the gliders that ease you from the sky to the ground. But Epic Games has built in some key differences, and those changes
+                        make encounters with enemies more frequent and matches faster. More shots fired means more chances of getting kills—and
+                        the adrenaline rush that goes with them. So while a chicken dinner is arguably tastier than a victory royale (because
+                        getting one is harder work), I find Fortnite’s 100-man battles more consistently fun.
+                    </p>
+    
+                     <div class="video">
+                         <iframe width="560" height="315" src="https://www.youtube.com/embed/vlL_U07Qol4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/is-in-viewport/3.0.0/isInViewport.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="countUp.js"></script>
+        <script>
+            //wow settings
+            wow = new WOW({
+                mobile: false,
+            })
+
+            //initiate wow animations
+            wow.init();
+
+            // $(window).on('resize scroll', function(e){
+            //     var content = $('.post-body');
+
+            //     if($(this).scrollTop() > 500){
+            //         content.addClass("body-fixed");
+            //         console.log($(this).scrollTop());
+            //         console.log("is visible");
+            //     }else{
+            //         content.removeClass("body-fixed");
+            //         console.log($(this).scrollTop());
+            //         console.log("is NOT visible");
+            //     }
+            // });
+
+            $(window).scroll(function () {
+                var $this = $(this),
+                    $head = $('.post-body');
+                if ($this.scrollTop() > 870) {
+                    $head.removeClass('body-fixed');
+                    console.log($(this).scrollTop());
+                    console.log("is visible");
+                } else {
+                    $head.addClass('body-fixed');
+                    console.log($(this).scrollTop());
+                    console.log("is NOT visible");
+                }
+            });
+
+        </script>
+    </body>
+
+</html>

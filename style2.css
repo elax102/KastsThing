@@ -1,0 +1,301 @@
+html,
+body{
+    margin: 0;
+    min-height: 100%;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.title,
+.color{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-text{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color{
+    background-color: #7beebe;
+}
+
+.title-text h1{
+  background: linear-gradient(90deg, #fff 49.9%, #7beebe 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,0);
+  font-family: 'Passion One', cursive;
+  font-size: 20vw;
+  margin: 0;
+  animation-name: titleAnim;
+  -webkit-animation-name: titleAnim;
+  animation-duration: 1s;
+  transition: all 0.3s;
+  background-image: url(images/tracer.jpg);
+}
+
+#intro{
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+#intro p{
+    font-size: 2rem;
+    height: 33.3vh;
+    display: flex;
+    align-items: center;
+}
+
+.posts-container{
+    width: 100%;
+}
+
+.post{
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+.post > *{
+    flex: 1;
+}
+
+.post a{
+    text-decoration: none;
+    margin: auto;
+}
+
+.post:last-child .post-pic{
+    height: 90vh;
+}
+
+.post-pic{
+    width: 100%;
+    height: 50vh;
+}
+
+.post-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50vh;
+}
+
+.post-content h1{
+    font-family: 'Passion One', cursive;
+    font-weight: 900;
+    line-height: 0.7;
+    margin: auto;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* POST SPECIFIC STYLES */
+.lol .post-content{
+    background-color: #7bdeee;
+}
+.lol .post-pic{
+    background-image: url(images/league.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+}
+.lol h1{
+    font-size: 25vw;
+}
+.lol a:hover{
+    text-decoration: underline;
+    text-decoration-color: #7a98ee;
+}
+
+
+.ow .post-content{
+    background-color: #eecc7b;
+}
+.ow .post-pic{
+    background-image: url(images/tracer.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: left center;
+}
+.ow h1{
+    font-size: 31vw;
+}
+.ow a:hover{
+    text-decoration: underline;
+    text-decoration-color: #ecee7b;
+}
+
+
+.dota .post-content{
+    background-color: #ee7b7b;
+}
+.dota .post-pic{
+    background-image: url(images/juggernaut.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+}
+.dota h1{
+    font-size: 30vw;
+}
+.dota a:hover{
+    text-decoration: underline;
+    text-decoration-color: #efa57a;
+}
+
+
+.fort .post-content{
+    background-color: #b2ee7b;
+}
+.fort .post-pic{
+    background-image: url(images/fortnite.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+}
+.fort h1{
+    font-size: 23vw;
+}
+.fort a:hover{
+    text-decoration: underline;
+    text-decoration-color: #7beee9;
+}
+
+@media only screen and (min-width: 768px){
+    .post{
+        flex-direction: row;
+    }
+
+    .post:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+
+    .post-content{
+        height: 100vh;
+    }
+
+    .post-pic{
+        height: 100vh;
+    }
+
+    .post:last-child .post-pic{
+        height: 100vh;
+    }
+
+    .lol h1{
+        font-size: 13vw;
+    }
+
+    .ow h1{
+        font-size: 16vw;
+    }
+
+    .dota h1{
+        font-size: 19vw;
+    }
+
+    .fort h1{
+        font-size: 11vw;
+    }
+}
+
+/* POST PAGE */
+.post-page-container{
+    min-height: 100vh;
+    position: relative;
+}
+
+.post-page-container h1{
+    font-family: 'Passion One', cursive;
+    color: #fff;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10vw;
+    padding: 100px 0;
+    height: 70vh;
+    margin-bottom: 100vh;
+    background-color: #b2ee7b;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.post-body{
+    position: static;
+    width: 100%;
+    margin-top: 80px;
+    padding-top: 100vh;
+    z-index: -1;
+}
+
+.post-body.body-fixed{
+    position: fixed;
+    width: 100%;
+    margin-top: 80px;
+    padding-top: 0;
+    z-index: -1;
+}
+
+.post-body > div{
+    padding: 40px 20px;
+    margin: auto;
+    max-width: 700px;
+}
+
+.post-body p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #414549;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

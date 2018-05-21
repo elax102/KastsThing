@@ -1,0 +1,108 @@
+body{
+	width:100%;
+	margin:auto;
+	background-color:#eee;
+}
+
+.super-container{
+	background-color: #fff;
+	width: 100%;
+	max-width: 1024px;
+	margin: auto;
+}
+
+h1{
+	font-family: 'Lobster', Georgia, Times, serif;
+	font-size: 70px;
+	text-align:center;
+	margin-top: 0;
+}
+
+h2 {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+h3 {
+	text-align: center;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+	padding-left:0;
+}
+
+li {
+    float: left;
+	display: inline-block;
+	width:20%;
+	text-align:center;
+	-webkit-transition: background-color .3s ease-in;
+    -moz-transition: background-color .3s ease-in;
+    -o-transition: background-color .3s ease-in;
+    transition: background-color .3s ease-in;
+}
+
+li a {
+	display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+	line-height:55px;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+li:hover {
+    background-color: #111;
+    text-decoration: none;
+    color:white;
+}
+section{
+	width:50%;
+	min-width:400px;
+	margin:auto;
+
+}
+img {
+	height:auto;
+	float:left;
+	margin:0.25%;
+    width:49.5%;
+	text-align: center;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-webkit-transition: filter .3s ease-in;
+    -moz-transition: filter .3s ease-in;
+    -o-transition: filter .3s ease-in;
+    transition: filter .3s;
+}
+
+img:hover {
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+}
+
+p {
+	text-align: center;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+footer {
+	padding-top: 1%;
+	clear: both;
+	height: 5%;
+	width: 100%;
+	background-color: #F8F8FF;
+	color: gray;
+	text-align: center;
+	font-style: italic;
+	margin: auto;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	
+	
+}
